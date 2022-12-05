@@ -1,0 +1,32 @@
+version: '3.6'
+
+services:
+  iris:
+    #image: containers.intersystems.com/intersystems/iris:2022.2.0.368.0
+    build:
+      context: ./iris
+      dockerfile: Dockerfile
+    init: true
+    container_name: iris4hcom
+    hostname: iris4h
+    ports:
+       - "52776:52773"
+       - "51776:1972"
+    environment:
+      - TZ=JST-9
+    volumes:
+      - /src:/ISC
+
+  webgw:
+    #image: containers.intersystems.com/intersystems/webgateway:2022.2.0.372.0
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: webgw1
+    init: true
+    ports:
+      - 8080:80
+      - 8443:443
+    environment:
+      SERVER_HOST: iris4h
+      SERVER_PORT: 1972
