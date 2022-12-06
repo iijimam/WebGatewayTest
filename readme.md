@@ -1,7 +1,7 @@
 # ApacheコンテナのHTTPS化＋IRIS for Healthへの接続サンプル
 
-- ※1 サンプルではIRIS2022.2を利用しています。[iris](/iris/)以下に iris.keyを配置すればコンテナビルド時にキーが有効化されます。
-- ※2 コミュニティエディション利用時は、[docker-compose.yml](docker-compose.yml) 19行目をコメント化（#）し、IRISの[Dockerfile](/iris/Dockerfile)のFROMのコンテナを適切なものに変更してください。
+- ※1 サンプルではIRIS for Health 2022.2.0コミュニティエディションを利用しています。
+- ※2 製品版を使用する場合は、[iris](/iris/)以下に iris.keyを配置し、[docker-compose.yml](docker-compose.yml) 19行目をコメントをはずします。IRISの[Dockerfile](/iris/Dockerfile)のFROMを適切なイメージに変更してください。（ライセンスキーはコンテナビルド時に有効化されます。）
 
 ## コンテナの開始
 
