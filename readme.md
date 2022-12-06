@@ -46,7 +46,7 @@ Apacheコンテナ起動時、以下にIRIS用のconfファイルが存在する
 
 `/etc/apache2/mods-available/CSP.conf`
 
-デフォルトの状態ではIRISの管理ポータル用設定が行われていないため、/csp/sys　のパスが来たときApacheからWebゲートウェイに転送されるように設定を追加する。
+デフォルトの状態ではIRISの管理ポータル用設定が行われていないため、/ のパスが来たときApacheからWebゲートウェイに転送されるように設定を追加する。
 
 追加内容は[webgateway.conf](/web/webgwfiles/webgateway.conf)の中身
 
