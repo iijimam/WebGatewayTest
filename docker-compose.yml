@@ -27,6 +27,4 @@ services:
     ports:
       - 8080:80
       - 8443:443
-    environment:
-      SERVER_HOST: iris4h
-      SERVER_PORT: 1972
+
