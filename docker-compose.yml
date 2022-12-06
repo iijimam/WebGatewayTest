@@ -15,7 +15,7 @@ services:
     environment:
       - TZ=JST-9
     volumes:
-      - /iris:/ISC
+      - ./iris:/ISC
     #command: --key /ISC/iris.key
 
   webgw:
